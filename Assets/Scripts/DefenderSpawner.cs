@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject defenderPrefab; // Contains defender prefab
+    Defender defenderPrefab; // Contains defender prefab
 
     // On mouse click down, spawn defender
     void OnMouseDown() {
         SpawnDefender(GetSquareSelected());
     }
+
+    // Sets the current defender prefab to the defender that is currently selected
+    public void SetSelectedDefender(Defender defenderToSelect)
+    {
+        defenderPrefab = defenderToSelect;
+    }
     
     // Gets square that the user clicked on
     Vector2 GetSquareSelected()
     {
-        Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(clickPos);
-        return worldPos;
+        Vector2 clickPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y); // Gets mouse position
+        Vector2 worldPos = Camera.main.ScreenToWorldPoint(clickPos); // Gets world position based on mouse position
+        Vector2 gridPos = SnapToGrid(worldPos); // Rounds the world position to integer values
+        return gridPos;
     }
 
-    // Spawns defender on given coordinates
-    void SpawnDefender(Vector2 worldCoords)
+    // Rounds the given vector2 and returns a new vector2
+    Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
-        GameObject newDefender = Instantiate(defenderPrefab, worldCoords, Quaternion.identity) as GameObject;
+        float newX = Mathf.RoundToInt(rawWorldPos.x); // Rounds X position
+        float newY = Mathf.RoundToInt(rawWorldPos.y); // Rounds Y position
+        return new Vector2(newX, newY);
+    }
+
+    // Spawns selected defender on given coordinates
+    void SpawnDefender(Vector2 spawnPos)
+    {
+        Defender newDefender = Instantiate(defenderPrefab, spawnPos, Quaternion.identity) as Defender;
     }
 }
