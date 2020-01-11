@@ -5,8 +5,8 @@ using TMPro;
 
 public class ResourceDisplay : MonoBehaviour
 {
-    [SerializeField] int resources = 100;
-    TMP_Text resourceText;
+    [SerializeField] int resources = 100; // Defines resource amount
+    TMP_Text resourceText; // Contains resource display text
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,12 @@ public class ResourceDisplay : MonoBehaviour
     void UpdateDisplay()
     {
         resourceText.text = resources.ToString();
+    }
+
+    // Checks if there is enough resources
+    public bool HaveEnoughResources(int amount)
+    {
+        return resources >= amount;
     }
 
     // Adds to resources by the amount

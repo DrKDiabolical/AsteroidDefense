@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class AttackerSpawner : MonoBehaviour
 {
-    [SerializeField] Attacker attackerPrefab;
-    [SerializeField] float minSpawnDelay = 1f;
-    [SerializeField] float maxSpawnDelay = 5f;
-    bool spawn = true;
+    [SerializeField] Attacker attackerPrefab; // Contains attacker prefab
+    [SerializeField] float minSpawnDelay = 1f; // Minimum spawn delay
+    [SerializeField] float maxSpawnDelay = 5f; // Maximum spawn delay
+    bool spawn = true; // Toggles the spawner on and off
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -20,14 +20,10 @@ public class AttackerSpawner : MonoBehaviour
         }
     }
 
+    // Spawns an attacker at the position of the attacker spawner
     void SpawnAttacker()
     {
-        Instantiate(attackerPrefab, transform.position, Quaternion.identity);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Attacker newAttacker = Instantiate(attackerPrefab, transform.position, Quaternion.identity) as Attacker;
+        newAttacker.transform.parent = transform; // Sets the attacker as a child of the spawner
     }
 }

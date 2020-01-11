@@ -8,13 +8,25 @@ public class DefenderSpawner : MonoBehaviour
 
     // On mouse click down, spawn defender
     void OnMouseDown() {
-        SpawnDefender(GetSquareSelected());
+        AttemptDefenderSpawn(GetSquareSelected());
     }
 
     // Sets the current defender prefab to the defender that is currently selected
     public void SetSelectedDefender(Defender defenderToSelect)
     {
         defenderPrefab = defenderToSelect;
+    }
+
+    // Attempts to spawn the defender if the player has enough resources
+    void AttemptDefenderSpawn(Vector2 gridPos)
+    {
+        var resourceDisplay = FindObjectOfType<ResourceDisplay>();
+        int defenderCost = defenderPrefab.GetResourceCost();
+        if (resourceDisplay.HaveEnoughResources(defenderCost))
+        {
+            SpawnDefender(gridPos);
+            resourceDisplay.SpendResources(defenderCost);
+        }
     }
     
     // Gets square that the user clicked on

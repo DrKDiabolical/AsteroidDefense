@@ -115,4 +115,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07066a4de1d724bd48dfbf77daa752ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceCost: 100
+  resourceCost: 50
