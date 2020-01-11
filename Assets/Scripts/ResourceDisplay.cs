@@ -5,7 +5,7 @@ using TMPro;
 
 public class ResourceDisplay : MonoBehaviour
 {
-    [SerializeField] int resources = 100; // Defines resource amount
+    [SerializeField] int resources = 150; // Defines resource amount
     TMP_Text resourceText; // Contains resource display text
 
     // Start is called before the first frame update
