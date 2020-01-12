@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7811984596403148875}
   - component: {fileID: 6662777154667302553}
   m_Layer: 0
-  m_Name: Repeater
+  m_Name: Launcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1332313649
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 684410361276987deadbb3fc564f0353, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35f923fb99ae9b731a3d97872c9745c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 394985579887548082}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20735a8a6caad619788490d181ead298, type: 2}
+  m_Controller: {fileID: 9100000, guid: 61bd5f1a86ca1ce17b557dca72008219, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644a2c17ab46964b482b7f8824b81088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1203208686877105907, guid: fd04385ca43720a378747479bf119a19,
+  projectile: {fileID: 1203208686877105907, guid: c83c0d0c6c8d603bd91e7ea3890b81b0,
     type: 3}
 --- !u!114 &6662777154667302553
 MonoBehaviour:
@@ -156,4 +156,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07066a4de1d724bd48dfbf77daa752ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceCost: 75
+  resourceCost: 125
