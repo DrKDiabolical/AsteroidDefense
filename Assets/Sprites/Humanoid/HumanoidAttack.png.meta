@@ -1,55 +1,43 @@
 fileFormatVersion: 2
-guid: 8d3552e878ddc77989a65c5cd49497c9
+guid: b6862b9d318ccd28896fdfb1c63f04d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 852118301769354435
-    second: HumanoidWalk_0
+      213: 8050373787190406496
+    second: HumanoidAttack_0
   - first:
-      213: 6575713731074957378
-    second: HumanoidWalk_1
+      213: 765975606934094156
+    second: HumanoidAttack_1
   - first:
-      213: 4469993075864532291
-    second: HumanoidWalk_2
+      213: 8525000068511748917
+    second: HumanoidAttack_2
   - first:
-      213: 575444945026921828
-    second: HumanoidWalk_3
+      213: -8560930703764641702
+    second: HumanoidAttack_3
   - first:
-      213: -7582720840010595072
-    second: HumanoidWalk_4
+      213: 756574140744671917
+    second: HumanoidAttack_4
   - first:
-      213: 2381752592100564438
-    second: HumanoidWalk_5
+      213: 5682489802898391077
+    second: HumanoidAttack_5
   - first:
-      213: -1926430137972596705
-    second: HumanoidWalk_6
+      213: -5541108840104400368
+    second: HumanoidAttack_6
   - first:
-      213: 8878695104026362854
-    second: HumanoidWalk_7
+      213: -3590754359513931879
+    second: HumanoidAttack_7
   - first:
-      213: -5875211696574189346
-    second: HumanoidWalk_8
+      213: -921836307264278508
+    second: HumanoidAttack_8
   - first:
-      213: -6136811301759660820
-    second: HumanoidWalk_9
+      213: 2884581666436398628
+    second: HumanoidAttack_9
   - first:
-      213: 6990359348029270242
-    second: HumanoidWalk_10
+      213: 13593331571851302
+    second: HumanoidAttack_10
   - first:
-      213: -3538493925320571248
-    second: HumanoidWalk_11
-  - first:
-      213: -6372941542774322033
-    second: HumanoidWalk_12
-  - first:
-      213: 1313756993481896812
-    second: HumanoidWalk_13
-  - first:
-      213: 7484508710171928665
-    second: HumanoidWalk_14
-  - first:
-      213: -4591384913626787320
-    second: HumanoidWalk_15
+      213: 6030484441830223068
+    second: HumanoidAttack_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -146,7 +134,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanoidWalk_0
+      name: HumanoidAttack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 645743a4dc19ca568bd6d8778a37f4e7
-      internalID: 852118301769354435
+      spriteID: 7bef5de805a027366a66ec976a014bef
+      internalID: 8050373787190406496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_1
+      name: HumanoidAttack_1
       rect:
         serializedVersion: 2
         x: 48
@@ -181,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 267a83791be6b1697a137ea80a1c03f8
-      internalID: 6575713731074957378
+      spriteID: 18965bfdda8d66c21907796258568f87
+      internalID: 765975606934094156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_2
+      name: HumanoidAttack_2
       rect:
         serializedVersion: 2
         x: 96
@@ -202,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 394616dd867f2409e808d932c1879aa2
-      internalID: 4469993075864532291
+      spriteID: a72f57c09e0ecc6199b004b89b38f203
+      internalID: 8525000068511748917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_3
+      name: HumanoidAttack_3
       rect:
         serializedVersion: 2
         x: 144
@@ -223,14 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 624ca3cfe75944b78a7f614bee01e15d
-      internalID: 575444945026921828
+      spriteID: 4e14a6398c030d2e887f34962938d352
+      internalID: -8560930703764641702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_4
+      name: HumanoidAttack_4
       rect:
         serializedVersion: 2
         x: 192
@@ -244,14 +232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f95ef2ff1607f90adaa7533a5c799868
-      internalID: -7582720840010595072
+      spriteID: 0b38994eb99bca78197e321f43bcbc83
+      internalID: 756574140744671917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_5
+      name: HumanoidAttack_5
       rect:
         serializedVersion: 2
         x: 240
@@ -265,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6999a060e4dfd4d589001a556128c5f9
-      internalID: 2381752592100564438
+      spriteID: e9b4760186845e2fa86241c171cd0ea7
+      internalID: 5682489802898391077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_6
+      name: HumanoidAttack_6
       rect:
         serializedVersion: 2
         x: 288
@@ -286,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24e78cdc83d4d5ffb8537a2abbf5099d
-      internalID: -1926430137972596705
+      spriteID: e6351f05017ff888db2b0153c60dc694
+      internalID: -5541108840104400368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_7
+      name: HumanoidAttack_7
       rect:
         serializedVersion: 2
         x: 336
@@ -307,14 +295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a0142754f3a502429fc799dc1e31a28
-      internalID: 8878695104026362854
+      spriteID: c009cd39012cc1464b11924dd2459ebf
+      internalID: -3590754359513931879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_8
+      name: HumanoidAttack_8
       rect:
         serializedVersion: 2
         x: 384
@@ -328,14 +316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7b775fc80b20a91831a8df2f380567
-      internalID: -5875211696574189346
+      spriteID: ca7e2cc8668bc4e0aaaa272953ccb832
+      internalID: -921836307264278508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_9
+      name: HumanoidAttack_9
       rect:
         serializedVersion: 2
         x: 432
@@ -349,14 +337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb51de347a08d1b591136c18be4edee
-      internalID: -6136811301759660820
+      spriteID: f60bfe8bc90ab03dda16d24d9b5fab9a
+      internalID: 2884581666436398628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_10
+      name: HumanoidAttack_10
       rect:
         serializedVersion: 2
         x: 480
@@ -370,14 +358,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a56946a58ccbe9b279de77f2f0dc0c33
-      internalID: 6990359348029270242
+      spriteID: 924431c67760292e1853b0d546412632
+      internalID: 13593331571851302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanoidWalk_11
+      name: HumanoidAttack_11
       rect:
         serializedVersion: 2
         x: 528
@@ -391,92 +379,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6b586d42f6dec3998887430bd59ad63
-      internalID: -3538493925320571248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanoidWalk_12
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 863266930fb1afcd6a7c2c3e842e4510
-      internalID: -6372941542774322033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanoidWalk_13
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96cf12906234805069b4200fc31b2e65
-      internalID: 1313756993481896812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanoidWalk_14
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3dc6205c65a0771fa00ec5fb7426e6b
-      internalID: 7484508710171928665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HumanoidWalk_15
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb85fc0df0cd60248976847c6f64a004
-      internalID: -4591384913626787320
+      spriteID: d2e26a5d05b2577a283a0d3a8e242209
+      internalID: 6030484441830223068
       vertices: []
       indices: 
       edges: []

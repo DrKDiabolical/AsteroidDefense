@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int health = 100; // Defines base health stat
-    Animator anim;
+    [SerializeField] float health = 100; // Defines base health stat
+    [SerializeField] float deathAnimationTime = 0f; // Defines death animation time
+    Animator anim; // Contains animator compenent
 
     void Start() {
         anim = GetComponent<Animator>();   
@@ -16,14 +17,14 @@ public class Health : MonoBehaviour
     }
 
     // Decreases health by amount given
-    public void decreaseHealth(int amount)
+    public void decreaseHealth(float amount)
     {
         health -= amount;
-        // If attacker reaches 0 health, then delete gameObject
+        // If object reaches 0 health, then delete gameObject
         if (health <= 0)
         {
             anim.SetTrigger("Death");
-            StartCoroutine(waitThenDie(0.75f));
+            StartCoroutine(waitThenDie(deathAnimationTime));
         }
     }
 

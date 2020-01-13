@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AttackerSpawner : MonoBehaviour
 {
-    [SerializeField] Attacker attackerPrefab; // Contains attacker prefab
+    [SerializeField] Attacker[] attackerPrefabs; // Contains attacker prefab
     [SerializeField] float minSpawnDelay = 1f; // Minimum spawn delay
     [SerializeField] float maxSpawnDelay = 5f; // Maximum spawn delay
     bool spawn = true; // Toggles the spawner on and off
@@ -16,14 +16,21 @@ public class AttackerSpawner : MonoBehaviour
         while (spawn)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minSpawnDelay, maxSpawnDelay));
-            SpawnAttacker();
+            Spawn(SelectAttacker(attackerPrefabs));
         }
     }
 
     // Spawns an attacker at the position of the attacker spawner
-    void SpawnAttacker()
+    void Spawn(Attacker attackerPrefab)
     {
         Attacker newAttacker = Instantiate(attackerPrefab, transform.position, Quaternion.identity) as Attacker;
         newAttacker.transform.parent = transform; // Sets the attacker as a child of the spawner
+    }
+
+    // Selects an attacker from an array of attackers
+    Attacker SelectAttacker(Attacker[] attackerPrefabs)
+    {
+        Attacker attackerPrefab = attackerPrefabs[(int)UnityEngine.Random.Range(0, attackerPrefabs.Length)];
+        return attackerPrefab;
     }
 }
