@@ -22,6 +22,11 @@ public class SceneMachine : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadGameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
     
     // Closes the application
     public void CloseGame()
