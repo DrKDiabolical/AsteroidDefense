@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class LevelHealthDisplay : MonoBehaviour
+public class LivesDisplay : MonoBehaviour
 {
-    TMP_Text levelHealthText;
+    TMP_Text livesText; // Contains Lives Text
 
     // Start is called before the first frame update
     void Start() {
-        levelHealthText = GetComponent<TMP_Text>();
+        livesText = GetComponent<TMP_Text>();
         UpdateDisplay();
     }
 
+    // Updates Lives Display
     public void UpdateDisplay()
     {
-        levelHealthText.text = FindObjectOfType<Level>().GetPlayerHealth().ToString();
+        livesText.text = FindObjectOfType<Lives>().GetLives().ToString();
     }
 }

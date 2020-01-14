@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 7329837765952222734}
   - component: {fileID: 7329837765952222732}
   m_Layer: 5
-  m_Name: LevelHealthDisplay
+  m_Name: LivesDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
