@@ -15,6 +15,14 @@ public class LevelController : MonoBehaviour
         loseCanvas.SetActive(false); // Set LoseCanvas to inactive
     }
 
+    void Update()
+    {
+        if (FindObjectOfType<Lives>().GetLives() <= 0)
+        {
+            HandleLoseCondition();
+        }
+    }
+
     // Increases amount of Attackers
     public void IncreaseAttackerAmount()
     {

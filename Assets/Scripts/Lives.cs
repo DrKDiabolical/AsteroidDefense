@@ -17,11 +17,6 @@ public class Lives : MonoBehaviour
         if (other.GetComponent<Attacker>())
         {
             lives -= 1;
-            // Loads Game Over scene when the player runs out of lives
-            if (lives <= 0)
-            {
-                FindObjectOfType<LevelController>().HandleLoseCondition();
-            }
             FindObjectOfType<LivesDisplay>().UpdateDisplay(); // Updates Lives Display
             Destroy(other.gameObject); // Destroys Attacker
         }

@@ -11,6 +11,12 @@ public class SceneMachine : MonoBehaviour
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex; // Assigns current scene index to variable  
     }
 
+    // Reloads the current scene
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
     // Loads the next scene on the index
     public void LoadNextScene()
     {
@@ -21,11 +27,6 @@ public class SceneMachine : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-    }
-
-    public void LoadGameOver()
-    {
-        SceneManager.LoadScene("GameOver");
     }
     
     // Closes the application
