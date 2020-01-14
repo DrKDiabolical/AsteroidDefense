@@ -20,7 +20,7 @@ public class Lives : MonoBehaviour
             // Loads Game Over scene when the player runs out of lives
             if (lives <= 0)
             {
-                FindObjectOfType<SceneMachine>().LoadGameOver();
+                FindObjectOfType<LevelController>().HandleLoseCondition();
             }
             FindObjectOfType<LivesDisplay>().UpdateDisplay(); // Updates Lives Display
             Destroy(other.gameObject); // Destroys Attacker

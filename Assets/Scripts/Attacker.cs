@@ -8,6 +8,17 @@ public class Attacker : MonoBehaviour
     float currentSpeed = 1f; // Defines speed for attacker
     GameObject currentTarget; // Contains current target
 
+    void Awake() {
+        FindObjectOfType<LevelController>().IncreaseAttackerAmount(); // Increases amount of Attackers
+    }
+
+    void OnDestroy() {
+        if (FindObjectOfType<LevelController>())
+        {
+            FindObjectOfType<LevelController>().DecreaseAttackerAmount(); // Decreases amount of Attackers
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

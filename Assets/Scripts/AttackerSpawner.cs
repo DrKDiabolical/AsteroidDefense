@@ -20,6 +20,12 @@ public class AttackerSpawner : MonoBehaviour
         }
     }
 
+    // Stops the spawner from spawning more Attackers
+    public void StopSpawning()
+    {
+        spawn = false;
+    }
+
     // Spawns an attacker at the position of the attacker spawner
     void Spawn(Attacker attackerPrefab)
     {
