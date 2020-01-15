@@ -6,9 +6,10 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] GameObject winCanvas; // Contains WinCanvas
     [SerializeField] GameObject loseCanvas; // Contains LoseCanvas
+    [SerializeField] float timeBeforeNextScene = 5f; // Defines the amount of time in seconds before the next scene loads
     int attackerAmount = 0; // Defines Attacker amount
     bool levelTimerFinished = false; // Toggles if level timer is finished
-
+    
     void Start()
     {
         winCanvas.SetActive(false); // Set WinCanvas to inactive
@@ -43,7 +44,8 @@ public class LevelController : MonoBehaviour
     IEnumerator HandleWinCondition()
     {
         winCanvas.SetActive(true); // Sets WinCanvas to active
-        yield return new WaitForSeconds(5f); // Waits for 5 seconds
+        GetComponent<AudioSource>().Play(); // Plays win audio clip
+        yield return new WaitForSeconds(timeBeforeNextScene); // Waits for 5 seconds
         FindObjectOfType<SceneMachine>().LoadNextScene(); // Loads next level
     }
 

@@ -9,7 +9,17 @@ public class Defender : MonoBehaviour
     // Returns the resource cost
     public int GetResourceCost()
     {
-        return resourceCost;
+        // Alters resourceCost depending on the difficulty within the PlayerPrefs
+        float difficulty = PlayerPrefsController.GetDifficulty();
+        if (difficulty == 0f)
+        {
+            resourceCost -= 50;
+        }
+        if (difficulty == 2f)
+        {
+            resourceCost += 50;
+        }
+        return resourceCost; // Returns resourceCost
     }
 
     // Adds to resources by the amount

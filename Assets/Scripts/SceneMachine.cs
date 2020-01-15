@@ -28,6 +28,12 @@ public class SceneMachine : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    // Loads the options scene
+    public void LoadOptions()
+    {
+        SceneManager.LoadScene("Options");
+    }
     
     // Closes the application
     public void CloseGame()

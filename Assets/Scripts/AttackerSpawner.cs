@@ -33,7 +33,7 @@ public class AttackerSpawner : MonoBehaviour
         newAttacker.transform.parent = transform; // Sets the attacker as a child of the spawner
     }
 
-    // Selects an attacker from an array of attackers
+    // Randomly selects an attacker from an array of attackers
     Attacker SelectAttacker(Attacker[] attackerPrefabs)
     {
         Attacker attackerPrefab = attackerPrefabs[(int)UnityEngine.Random.Range(0, attackerPrefabs.Length)];

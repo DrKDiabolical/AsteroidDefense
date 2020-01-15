@@ -1601,6 +1601,11 @@ PrefabInstance:
       propertyPath: loseCanvas
       value: 
       objectReference: {fileID: 382319547}
+    - target: {fileID: 5209395119263351579, guid: 70b5015a924face97a11cb6ec917d016,
+        type: 3}
+      propertyPath: timeBeforeNextScene
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70b5015a924face97a11cb6ec917d016, type: 3}
 --- !u!1001 &5399088104364434672
