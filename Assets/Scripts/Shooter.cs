@@ -7,10 +7,17 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectile; // Contains prefab for projectile
     AttackerSpawner myLaneSpawner; // Contains Attacker Spawner within the Defender's lane
     Animator animator; // Contains Defender Animator
+    GameObject projectileParent; // Contains parent object for organization
+    const string PROJECTILE_PARENT_NAME = "Projectiles"; // Defines parent object name
 
     void Start() {
         SetLaneSpawner();
         animator = GetComponent<Animator>();
+        projectileParent = GameObject.Find(PROJECTILE_PARENT_NAME);
+        if (!projectileParent)
+        {
+            projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
+        }
     }
 
     void Update() {
@@ -55,6 +62,7 @@ public class Shooter : MonoBehaviour
     // Instantiates a projectile
     public void Fire()
     {
-        Instantiate(projectile, transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity); // Instantiates firing projectile
+        var newProjectile = Instantiate(projectile, transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity); // Instantiates firing projectile
+        newProjectile.transform.parent = projectileParent.transform; // Parents newly instantiated object to parent object
     }
 }

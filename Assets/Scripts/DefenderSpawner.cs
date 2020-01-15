@@ -5,6 +5,21 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     Defender defenderPrefab; // Contains defender prefab
+    GameObject defenderParent; // Contains parent object for organization
+    const string DEFENDER_PARENT_NAME = "Defenders"; // Defines parent object name
+
+    void Start() {
+        CreateDefenderParent();
+    }
+
+    void CreateDefenderParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+    }
 
     // On mouse click down, spawn defender
     void OnMouseDown() {
@@ -22,6 +37,16 @@ public class DefenderSpawner : MonoBehaviour
     {
         var resourceDisplay = FindObjectOfType<ResourceDisplay>();
         int defenderCost = defenderPrefab.GetResourceCost();
+        // Alters defenderCost depending on the difficulty within the PlayerPrefs
+        float difficulty = PlayerPrefsController.GetDifficulty();
+        if (difficulty == 0f)
+        {
+            defenderCost -= 50;
+        }
+        if (difficulty == 2f)
+        {
+            defenderCost += 50;
+        }
         if (resourceDisplay.HaveEnoughResources(defenderCost))
         {
             SpawnDefender(gridPos);
@@ -50,5 +75,6 @@ public class DefenderSpawner : MonoBehaviour
     void SpawnDefender(Vector2 spawnPos)
     {
         Defender newDefender = Instantiate(defenderPrefab, spawnPos, Quaternion.identity) as Defender;
+        newDefender.transform.parent = defenderParent.transform; // Parents newly instantiated object to parent object
     }
 }
